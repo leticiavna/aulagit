@@ -1,0 +1,40 @@
+Site das cafeterias Brafé:
+
+- Catálogo
+Apresentar uma foto ampla do produto com uma pequena descrição "acolhedora" do mesmo. Além disso, criar um sistema que permita que o administrador consiga inserir/remover/atualizar produtos assim que desejar. Ser bem dinâmico.
+
+- Ecommerce
+Como o cliente não deseja algo clichê, é interessante fugir do padrão de lojas online, tais como submarino, saraiva, dentre outras. Ao mesmo tempo, deve ser direto e de facilidade de uso. Também deve possuir um  sistema de filtro, para facilitar o uso pelo usuário. É necessário ter:
+	- botão "comprar" (adiciona o item no carrinho)
+	- botão "carrinho" (redireciona para página carrinho)
+	- foto do produto
+	- descrição do produto
+	- quantidade desejada
+	- Preço total
+	- calculo de frete
+	- calculo total	
+
+A página "Carrinho" deve possuir: 
+	- Nome do produto
+	- Total de itens adicionados ao carrinho
+	- Preço unitário do produto
+	- Preço total (quantidade x preço unit.)
+	- Calculo do frete
+	- Valor total a pagar
+	- botão "Finalizar pedido" (redireciona para "forma de pagamento)
+
+Página "Forma de Pagamento":
+	- expor os métodos de pagamento disponíveis
+	- caso escolha cartão: campos para inserir informações
+	- caso escolha boleto: gerar boleto
+	- botão "Finalizar"
+
+
+- Newsletter
+Criação de um sistema que cadastre o e-mail da pessoa para receber a newsletter da empresa automaticamente e que permita que o administrador envie a newsletter quando desejar. Tanto o cadastro quanto o aviso sobre a newsletter deve se encontrar na página inicial do site.
+
+- Institucional
+Página expositiva e estática que tem como objetivo expor a história da empresa em forma de textos e fotos, assim como os valores da mesma.
+
+- Localização das Lojas
+Inserir um mapa dinâmico (google maps) em que o consumidor consiga traçar uma rota de onde ele se encontra até a loja desejada, além de um "mini-catálogo" em que serão expostas fotos das lojas com sua identificação. 
