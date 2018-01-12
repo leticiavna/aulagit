@@ -1,0 +1,13 @@
+# permite que todos os indexadores pesquisem
+
+User-agent: * 
+
+# qual pagina queremos que sejam ou nao localizadas
+
+Allow: /sobre
+Allow: /produtos
+Disallow: /contato
+Disallow: /enviar
+Disallow: /saiba-mais
+Disallow: /portfolio
+Disallow: /ver-mapa
