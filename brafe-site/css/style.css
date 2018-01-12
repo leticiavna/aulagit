@@ -213,7 +213,7 @@ h2.produtos-mineiro::before {
 /*locais*/
 
 .locais {
-	margin: 50px 220px;
+ 	padding: 36px 0;
 }
 
 .locais-item::before, .locais-item::after {
@@ -223,18 +223,21 @@ h2.produtos-mineiro::before {
 }
 
 .locais-item {
-	margin: 80px auto;
-	width: 850px;
+	max-width: 960px;
+  	margin: 0 auto;
+	margin-bottom: 36px;
 }
 
 .locais-item img {
 	float: left;
-	margin-right: 30px;
+	margin: 0 25px;
+	max-width: 460px;
 }
 
 .locais-item p {
 	font-size: 0.875em;
 	line-height: 1.4em;
+	margin-bottom: 30px; 
 }
 
 .locais-item h2 {
@@ -250,8 +253,8 @@ h2.produtos-mineiro::before {
 	font-weight: 700;
 	font-size: 1.125em;
 	text-align: center;
-	padding: 15px;
-	margin: 30px 0;
+	padding: 20px;
+	margin: 0px auto;
 	transition: 0.5s ease-in-out;
 }
 
@@ -288,11 +291,21 @@ h2.produtos-mineiro::before {
 	padding-top: 6px;  
 }
 
+.assine-info::before, .assine-info::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.assine-info form {
+	float:right;
+}
 .assine-container label {
  	display:none;
  }
 
 .assine-container input {
+	margin-right: 20px;
 	background: #e7e4d8;
 	border: 3px solid #252525;
 	font-size: 1.125em;
@@ -311,7 +324,7 @@ h2.produtos-mineiro::before {
 	color: #FFFFFF;
 	font-weight: 200;
 	font-size: 1.125em;
-	margin-left: -20px;
+	margin-left: -40px;
 	border: 3px solid #252525;
 	/* ***** */
 }
@@ -319,16 +332,18 @@ h2.produtos-mineiro::before {
 .footer {
 	color: #252525;
 	background: #d6d4c8;
-	padding: 50px;
+	padding: 60px;
 }
 
 .footer-container {
 	max-width: 960px;
 	margin: 0 auto;
-	margin-bottom: 20px;
 	/* ***** */
 }
 
+.footer-container div {
+	display: inline-block;
+}
 .footer-container p {
 	float: left;
 }
