@@ -5,8 +5,16 @@ class StaticPagesController < ApplicationController
   def about
   end
   
-  def create
-  	
+  def create	
   end
+  
+  def items
+  end
+
+  def contact
+  end
+
+  def join
+  end 
 
 end

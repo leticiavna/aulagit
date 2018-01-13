@@ -16,7 +16,7 @@ class StoresController < ApplicationController
   end
 
   def index
-  	@stores = Store.all
+  	@store = Store.all
   end
 
   def destroy
@@ -24,6 +24,7 @@ class StoresController < ApplicationController
     @store.destroy
     redirect_to stores_path
   end
+
 
   private
 

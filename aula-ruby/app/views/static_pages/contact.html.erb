@@ -1,0 +1,43 @@
+<h1> Fale conosco </h1>
+<br>
+
+<p><%= notice %></p>
+<p><%= alert %></p>
+<br>
+
+
+<%= form_for @contact, url: :contact, method: :post do |form| %> 
+	<% if @contact.errors.any? && @contact.errors[:name] %>
+		<%= form.label "Nome #{@contact.errors[:name].first}" %>
+	<% else %>
+		<%= form.label "Nome" %>
+	<% end %>
+	<%= form.text_field :name %>
+	<br>
+
+	<% if @contact.errors.any? && @contact.errors[:email] %>
+		<%= form.label "Email #{@contact.errors[:email].first}" %>
+	<% else %>
+		<%= form.label "Email" %>
+	<% end %>
+	<%= form.number_field :email %>
+	<br>
+
+	<% if @contact.errors.any? && @contact.errors[:subject] %>
+		<%= form.label "Assunto #{@contact.errors[:subject].first}" %>
+	<% else %>
+		<%= form.label "Assunto" %>
+	<% end %>
+	<%= form.number_field :subject %>
+	<br>
+
+	<% if @contact.errors.any? && @contact.errors[:description] %>
+		<%= form.label "Descrição #{@contact.errors[:description].first}" %>
+	<% else %>
+		<%= form.label "Descrição" %>
+	<% end %>
+	<%= form.number_field :description %>
+	<br>
+
+	<%= form.submit "Enviar" %>
+<% end %>
