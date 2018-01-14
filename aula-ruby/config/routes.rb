@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get "contato", to: 'contacts#index', as: :contact
+  post "contato", to: "contacts#create"
+
+  get 'juntese', to: 'applicants#index', as: :join
+  post "juntese", to: 'applicants#create'
+
   get 'produtos/novo_produto', to: "items#new", as: :new_item
   get 'produtos', to: "items#index", as: :items
   post "produtos", to: "items#create"
@@ -14,8 +20,6 @@ Rails.application.routes.draw do
 
   get 'home', to: "static_pages#index", as: :home
   get 'sobre', to: "static_pages#about", as: :about
-  get 'contato', to: "static_pages#contact", as: :contact
-  get  'juntese', to: "static_pages#join", as: :join
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

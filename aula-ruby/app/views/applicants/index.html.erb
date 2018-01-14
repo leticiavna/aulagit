@@ -1,13 +1,13 @@
 <h1> Junte-se a nós </h1>
 <br>
 
+<%= image_tag "coffeeshop.jpg", alt: "cafeteria" %>
 <p><%= notice %></p>
 <p><%= alert %></p>
-<br>
-
+<br>	
 <p> Ficamos felizes com o seu interesse em se juntar à Brafé! 
 	<br> Por favor preencha o formulário abaixo para prosseguir.</p>
-
+<br> <br>
 
 <%= form_for @applicant, url: :join, method: :post do |form| %> 
 	<% if @applicant.errors.any? && @applicant.errors[:name] %>
@@ -23,7 +23,7 @@
 	<% else %>
 		<%= form.label "E-mail" %>
 	<% end %>
-	<%= form.number_field :email %>
+	<%= form.text_field :email %>
 	<br>
 
 	<% if @applicant.errors.any? && @applicant.errors[:telephone] %>
@@ -39,15 +39,15 @@
 	<% else %>
 		<%= form.label "Área de atuação" %>
 	<% end %>
-	<%= form.number_field :position %>
+	<%= form.text_field :position %>
 	<br>
 
 	<% if @applicant.errors.any? && @applicant.errors[:bio] %>
 		<%= form.label "Bio #{@applicant.errors[:bio].first}" %>
 	<% else %>
-		<%= form.label "Conte-nos sobre você e seu interesse na Brafé" %>
+		<%= form.label "Conte-nos sobre você e seu interesse na Brafé: " %>
 	<% end %>
-	<%= form.number_field :bio %>
+	<%= form.text_field :bio %>
 	<br>
 	<%= form.submit "Junte-se" %>
 <% end %>

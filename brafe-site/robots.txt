@@ -7,10 +7,11 @@ User-agent: *
 Allow: /sobre
 Allow: /produtos
 Allow: /contato
-Allow: /enviar
 Allow: /lojas
 Disallow: /saiba-mais
 Disallow: /portfolio
 Disallow: /ver-mapa
-Disallow: /lojas/nova_loja
-Disallow: /junte_se
+Disallow: /lojas/nova_loja	
+Allow: /juntese
+Disallow: /produtos/novo_produto
+Disallow: /enviar

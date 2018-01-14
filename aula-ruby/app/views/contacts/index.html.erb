@@ -1,6 +1,7 @@
 <h1> Fale conosco </h1>
 <br>
 
+<%= image_tag "coffee.JPG", alt: "cafés aesthetic" %>
 <p><%= notice %></p>
 <p><%= alert %></p>
 <br>
@@ -20,7 +21,7 @@
 	<% else %>
 		<%= form.label "Email" %>
 	<% end %>
-	<%= form.number_field :email %>
+	<%= form.text_field :email %>
 	<br>
 
 	<% if @contact.errors.any? && @contact.errors[:subject] %>
@@ -28,7 +29,7 @@
 	<% else %>
 		<%= form.label "Assunto" %>
 	<% end %>
-	<%= form.number_field :subject %>
+	<%= form.text_field :subject %>
 	<br>
 
 	<% if @contact.errors.any? && @contact.errors[:description] %>
@@ -36,7 +37,7 @@
 	<% else %>
 		<%= form.label "Descrição" %>
 	<% end %>
-	<%= form.number_field :description %>
+	<%= form.text_field :description %>
 	<br>
 
 	<%= form.submit "Enviar" %>
