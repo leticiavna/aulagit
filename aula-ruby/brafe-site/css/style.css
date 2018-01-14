@@ -301,11 +301,9 @@ h2.produtos-mineiro::before {
 
 .assine-info form {
 	float:right;
+	outline: none;
 }
 
-.assine-info form:active {
-	color: #252525;
-}
 
 .assine-container form label {
  	display:none;

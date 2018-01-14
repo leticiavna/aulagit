@@ -13,4 +13,10 @@ class ApplicantsController < ApplicationController
       render "index"
     end
   end
+
+  private
+
+  def applicant_params
+    params.require(:applicant).permit(:name, :email, :telephone, :position, :bio)
+  end
 end
