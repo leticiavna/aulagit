@@ -1,12 +1,12 @@
-<h1> Fale conosco </h1>
+<section class="contact">
+	<h1> Fale conosco </h1>
 <br>
-
-<%= image_tag "coffee.JPG", alt: "cafés aesthetic" %>
+</section>
 <p><%= notice %></p>
 <p><%= alert %></p>
 <br>
 
-
+<section class="contact-form">
 <%= form_for @contact, url: :contact, method: :post do |form| %> 
 	<% if @contact.errors.any? && @contact.errors[:name] %>
 		<%= form.label "Nome #{@contact.errors[:name].first}" %>
@@ -41,4 +41,9 @@
 	<br>
 
 	<%= form.submit "Enviar" %>
+
+	<section class="contact-img">
+		<%= image_tag "map.png", alt: "cafés aesthetic" %>
+</section>
+</section>
 <% end %>

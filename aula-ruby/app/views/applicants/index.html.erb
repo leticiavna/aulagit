@@ -1,53 +1,57 @@
+<section class="applicant">
 <h1> Junte-se a nós </h1>
 <br>
+</section>
+<section class="applicant-img">
+	<%= image_tag "coffee.jpg", alt: "cafeteria" %>
+	<p><%= notice %></p>
+	<p><%= alert %></p>
+	<br>	
+	<p> Ficamos felizes com o seu interesse em se juntar à Brafé! 
+		<br> Por favor preencha o formulário abaixo para prosseguir.</p>
+	<br> <br>
+</section>
+<section class="applicant-form">
+	<%= form_for @applicant, url: :join, method: :post do |form| %> 
+		<% if @applicant.errors.any? && @applicant.errors[:name] %>
+			<%= form.label "Nome Completo #{@applicant.errors[:name].first}" %>
+		<% else %>
+			<%= form.label "Nome Completo" %>
+		<% end %>
+		<%= form.text_field :name %>
+		<br>
 
-<%= image_tag "coffeeshop.jpg", alt: "cafeteria" %>
-<p><%= notice %></p>
-<p><%= alert %></p>
-<br>	
-<p> Ficamos felizes com o seu interesse em se juntar à Brafé! 
-	<br> Por favor preencha o formulário abaixo para prosseguir.</p>
-<br> <br>
+		<% if @applicant.errors.any? && @applicant.errors[:email] %>
+			<%= form.label "E-mail #{@applicant.errors[:email].first}" %>
+		<% else %>
+			<%= form.label "E-mail" %>
+		<% end %>
+		<%= form.text_field :email %>
+		<br>
 
-<%= form_for @applicant, url: :join, method: :post do |form| %> 
-	<% if @applicant.errors.any? && @applicant.errors[:name] %>
-		<%= form.label "Nome Completo #{@applicant.errors[:name].first}" %>
-	<% else %>
-		<%= form.label "Nome Completo" %>
+		<% if @applicant.errors.any? && @applicant.errors[:telephone] %>
+			<%= form.label "Telefone #{@applicant.errors[:telephone].first}" %>
+		<% else %>
+			<%= form.label "Telefone" %>
+		<% end %>
+		<%= form.number_field :telephone %>
+		<br>
+
+		<% if @applicant.errors.any? && @applicant.errors[:position] %>
+			<%= form.label "Área de atuação #{@applicant.errors[:position].first}" %>
+		<% else %>
+			<%= form.label "Área de atuação" %>
+		<% end %>
+		<%= form.text_field :position %>
+		<br>
+
+		<% if @applicant.errors.any? && @applicant.errors[:bio] %>
+			<%= form.label "Bio #{@applicant.errors[:bio].first}" %>
+		<% else %>
+			<%= form.label "Conte-nos sobre você e seu interesse na Brafé: " %>
+		<% end %>
+		<%= form.text_field :bio %>
+		<br>
+		<%= form.submit "Junte-se" %>
 	<% end %>
-	<%= form.text_field :name %>
-	<br>
-
-	<% if @applicant.errors.any? && @applicant.errors[:email] %>
-		<%= form.label "E-mail #{@applicant.errors[:email].first}" %>
-	<% else %>
-		<%= form.label "E-mail" %>
-	<% end %>
-	<%= form.text_field :email %>
-	<br>
-
-	<% if @applicant.errors.any? && @applicant.errors[:telephone] %>
-		<%= form.label "Telefone #{@applicant.errors[:telephone].first}" %>
-	<% else %>
-		<%= form.label "Telefone" %>
-	<% end %>
-	<%= form.number_field :telephone %>
-	<br>
-
-	<% if @applicant.errors.any? && @applicant.errors[:position] %>
-		<%= form.label "Área de atuação #{@applicant.errors[:position].first}" %>
-	<% else %>
-		<%= form.label "Área de atuação" %>
-	<% end %>
-	<%= form.text_field :position %>
-	<br>
-
-	<% if @applicant.errors.any? && @applicant.errors[:bio] %>
-		<%= form.label "Bio #{@applicant.errors[:bio].first}" %>
-	<% else %>
-		<%= form.label "Conte-nos sobre você e seu interesse na Brafé: " %>
-	<% end %>
-	<%= form.text_field :bio %>
-	<br>
-	<%= form.submit "Junte-se" %>
-<% end %>
+</section>
